@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로체코리아 - 인도 비즈니스 전문 컨설팅</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/common.css">
+</head>
+<body>
+    <div id="header"></div>
+    
+    <!-- 페이지 컨텐츠가 여기에 들어갑니다 -->
+    <main>
+        <!-- 각 페이지의 내용 -->
+    </main>
+
+    <script>
+        // 헤더 로드
+        fetch('/components/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+
+        // 메뉴 동작 스크립트
+        document.addEventListener('DOMContentLoaded', function() {
+            const navItems = document.querySelectorAll('.nav-item');
+            
+            navItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    const submenu = this.querySelector('.submenu');
+                    if (submenu) {
+                        navItems.forEach(otherItem => {
+                            if (otherItem !== item) {
+                                const otherSubmenu = otherItem.querySelector('.submenu');
+                                if (otherSubmenu) {
+                                    otherSubmenu.style.display = 'none';
+                                }
+                            }
+                        });
+
+                        const isDisplayed = submenu.style.display === 'block';
+                        submenu.style.display = isDisplayed ? 'none' : 'block';
+                        
+                        if (!isDisplayed) {
+                            e.preventDefault();
+                        }
+                    }
+                });
+
+                const groupItems = item.querySelectorAll('.group');
+                groupItems.forEach(groupItem => {
+                    groupItem.addEventListener('mouseenter', function() {
+                        const groupSubmenu = this.querySelector('.group-submenu');
+                        if (groupSubmenu) {
+                            groupSubmenu.style.display = 'block';
+                        }
+                    });
+
+                    groupItem.addEventListener('mouseleave', function() {
+                        const groupSubmenu = this.querySelector('.group-submenu');
+                        if (groupSubmenu) {
+                            groupSubmenu.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            if (window.innerWidth > 768) {
+                navItems.forEach(item => {
+                    item.addEventListener('mouseenter', function() {
+                        const submenu = this.querySelector('.submenu');
+                        if (submenu) {
+                            submenu.style.display = 'block';
+                        }
+                    });
+
+                    item.addEventListener('mouseleave', function() {
+                        const submenu = this.querySelector('.submenu');
+                        if (submenu) {
+                            submenu.style.display = 'none';
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html> 
