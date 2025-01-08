@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -98,4 +99,106 @@
             });
     </script>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>교육 일정 - 로체코리아</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles/common.css">
+</head>
+<body>
+    <header class="bg-white shadow-sm relative z-40">
+        <!-- programs.html과 동일한 헤더 구조 -->
+    </header>
+
+    <main>
+        <section class="bg-gradient-to-r from-indigo-900 to-indigo-700 text-white">
+            <div class="border-b border-indigo-800">
+                <div class="container mx-auto max-w-6xl px-4">
+                    <nav class="flex justify-between items-center py-4">
+                        <ul class="flex space-x-6 text-sm">
+                            <li>
+                                <a href="./programs.html" class="text-indigo-200 hover:text-white transition duration-200">교육 프로그램</a>
+                            </li>
+                            <li>
+                                <a href="./schedule.html" class="text-white font-medium" aria-current="page">교육 일정</a>
+                            </li>
+                            <li>
+                                <a href="./apply.html" class="text-indigo-200 hover:text-white transition duration-200">수강 신청</a>
+                            </li>
+                        </ul>
+                        <div>
+                            <a href="../../pages/contact.html" class="bg-white text-indigo-600 px-4 py-2 rounded text-sm font-medium hover:bg-indigo-50 transition duration-200">
+                                상담 신청
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div class="container mx-auto max-w-6xl px-4 py-16">
+                <h1 class="text-4xl font-bold">교육 일정</h1>
+                <p class="text-xl mt-4">2024년 교육 프로그램 일정 안내</p>
+            </div>
+        </section>
+
+        <section class="py-16">
+            <div class="container mx-auto max-w-6xl px-4">
+                <div class="space-y-12">
+                    <div class="bg-white p-8 rounded-lg shadow">
+                        <h2 class="text-2xl font-bold mb-6">1분기 교육 일정</h2>
+                        <div class="space-y-6">
+                            <div class="border-b pb-6">
+                                <h3 class="text-lg font-medium text-gray-900 mb-2">인도 시장 이해 과정</h3>
+                                <p class="text-gray-600 mb-2">일시: 2024년 1월 15일 ~ 1월 19일</p>
+                                <p class="text-gray-600 mb-4">장소: 로체코리아 교육센터</p>
+                                <a href="./apply.html" class="inline-block bg-indigo-600 text-white px-4 py-2 rounded text-sm hover:bg-indigo-700 transition duration-200">
+                                    신청하기
+                                </a>
+                            </div>
+                            <div class="border-b pb-6">
+                                <h3 class="text-lg font-medium text-gray-900 mb-2">비즈니스 실무 교육</h3>
+                                <p class="text-gray-600 mb-2">일시: 2024년 2월 5일 ~ 2월 9일</p>
+                                <p class="text-gray-600 mb-4">장소: 로체코리아 교육센터</p>
+                                <a href="./apply.html" class="inline-block bg-indigo-600 text-white px-4 py-2 rounded text-sm hover:bg-indigo-700 transition duration-200">
+                                    신청하기
+                                </a>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-medium text-gray-900 mb-2">현지화 전략 수립</h3>
+                                <p class="text-gray-600 mb-2">일시: 2024년 3월 11일 ~ 3월 15일</p>
+                                <p class="text-gray-600 mb-4">장소: 로체코리아 교육센터</p>
+                                <a href="./apply.html" class="inline-block bg-indigo-600 text-white px-4 py-2 rounded text-sm hover:bg-indigo-700 transition duration-200">
+                                    신청하기
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer"></div>
+
+    <script>
+        // 헤더 로드
+        fetch('../../components/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+
+        // 푸터 로드
+        fetch('../../components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
+</body>
+>>>>>>> fe9e6ceecd64f20fe517ede450e4d744dba8caaf
 </html> 
