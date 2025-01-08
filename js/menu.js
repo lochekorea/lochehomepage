@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 document.addEventListener('DOMContentLoaded', function() {
     // 모바일 메뉴 토글
     const mobileMenuButtons = document.querySelectorAll('.mobile-menu-button');
@@ -24,7 +23,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-=======
 document.addEventListener('DOMContentLoaded', function() {
     // 모바일 메뉴 토글
     const mobileMenuButtons = document.querySelectorAll('.mobile-menu-button');
@@ -50,5 +48,4 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
->>>>>>> fe9e6ceecd64f20fe517ede450e4d744dba8caaf
 }); 

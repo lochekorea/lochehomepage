@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 class ComponentLoader {
     static cache = new Map();
 
@@ -25,7 +24,6 @@ class ComponentLoader {
             console.error(`Failed to load component: ${componentPath}`, error);
         }
     }
-=======
 class ComponentLoader {
     static cache = new Map();
 
@@ -52,5 +50,4 @@ class ComponentLoader {
             console.error(`Failed to load component: ${componentPath}`, error);
         }
     }
->>>>>>> fe9e6ceecd64f20fe517ede450e4d744dba8caaf
 } 
