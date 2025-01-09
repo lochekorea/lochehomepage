@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<div id="kakao-talk-channel-chat-button"></div>
+
+<script src="https://t1.kakaocdn.net/kakao_js_sdk/2.6.0/kakao.min.js"></script>
+<script>
+  // SDK 초기화
+  Kakao.init(bf699849fd480e04ad6f7f856fce8d6c); // 발급받은 자바스크립트 키로 교체
+
+  // 채널 버튼 생성
+  window.kakaoAsyncInit = function() {
+    Kakao.Channel.createChatButton({
+      container: '#kakao-talk-channel-chat-button',
+      channelPublicId: 1185255, // 카카오톡 채널 ID로 교체
+      size: 'large',
+      position: 'fixed',
+      bottom: '30px',
+      right: '30px'
+    });
+  };
+</script>
+
+<!-- 스타일 설정 -->
+<style>
+  #kakao-talk-channel-chat-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999;
+  }
+</style>
